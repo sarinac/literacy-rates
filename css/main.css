@@ -1,0 +1,436 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+/* ----------------- Set Color Palette ----------------- */
+
+/* https://coolors.co/294c60-6b8192-adb6c4-ffefd3-ffc49b-db9982-b76d68 */
+/* https://coolors.co/234051-294c60-3a5a6d-6b8192-adb6c4-ffefd3-ffc49b-db9982-b76d68 */
+:root {
+    --background-color: #fff2dc;
+    --outline-color: #1C3441;
+    --outline-background-color: #77858D;
+    /* --p1-color: #ccae62;
+    --p2-color: #f2a15f;
+    --p3-color: #b8b4aa; */
+    /* --p5-color: #294c60; */
+    --p5-color: #3A5A6D;
+    --p4-color: #6b8192;
+    --p3-color: #adb6c4;
+    --p2-color: #ffc49b;
+    --p1-color: #db9982;
+    --p0-color: #b76d68;
+}
+
+/* Fill */
+.p0-color {
+    fill: var(--p0-color);
+    stroke: var(--p0-color);
+    stroke-width: 0;
+    color: var(--p0-color);
+}
+.p1-color {
+    fill: var(--p1-color);
+    stroke: var(--p1-color);
+    stroke-width: 0;
+    color: var(--p1-color);
+}
+.p2-color {
+    fill: var(--p2-color);
+    stroke: var(--p2-color);
+    stroke-width: 0;
+    color: #ebb38a;  /* Fix contrast */
+}
+.p3-color {
+    fill: var(--p3-color);
+    stroke: var(--p3-color);
+    stroke-width: 0;
+    color: var(--p3-color);
+}
+.p4-color {
+    fill: var(--p4-color);
+    stroke: var(--p4-color);
+    stroke-width: 0;
+    color: var(--p4-color);
+}
+.p5-color {
+    fill: var(--p5-color);
+    stroke: var(--p5-color);
+    stroke-width: 0;
+    color: var(--p5-color);
+}
+
+/* Stroke */
+.p0-color-stroke {
+    stroke: var(--p0-color);
+}
+.p1-color-stroke {
+    stroke: var(--p1-color);
+}
+.p2-color-stroke {
+    stroke: var(--p2-color);
+}
+.p3-color-stroke {
+    stroke: var(--p3-color);
+}
+.p4-color-stroke {
+    stroke: var(--p4-color);
+}
+.p5-color-stroke {
+    stroke: var(--p5-color);
+}
+
+.p0-color-outline,
+.p1-color-outline,
+.p2-color-outline,
+.p3-color-outline,
+.p4-color-outline {
+    stroke: var(--outline-color);
+}
+.p5-color-outline {
+    stroke: var(--outline-background-color);
+}
+
+.bold {
+    font-weight: bold;
+}
+/* ----------------- Set Layout ----------------- */
+
+html {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    text-align: left;
+    font-family: 'Lora', serif;
+    margin-bottom: 0.4rem;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Lora', serif;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 3rem;
+}
+
+p,
+li {
+    font-size: 14px;
+    margin-bottom: 0.4rem;
+}
+
+#legend h3 {
+    font-size: 16px;
+    font-style: normal;
+    margin-top: 0rem;
+}
+
+
+/* ----------------- Layout ----------------- */
+
+.container {
+    margin: 0 auto;
+    padding: 30px 0;
+    width: 1000px;
+
+}
+.horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+.description {
+    padding-bottom: 10%;
+    border-bottom: dashed 1px #59697f;
+    border-top: dashed 1px #59697f;
+    padding: 20px 0px;
+}
+.vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.container > div {
+    padding-bottom: 2rem;
+}
+
+#logo-center {
+    text-align: center;
+}
+#logo-center img {
+    max-height: 100px;
+}
+/* ----------------- Axis ----------------- */
+
+.axis {
+    color: var(--outline-color);
+    stroke-width: 1px;
+}
+.axis-label {
+    font-weight: 600;
+    text-anchor: start;
+    fill: var(--outline-color);
+    font-size: 12px;
+}
+.axis path {
+    stroke: var(--outline-color);
+}
+
+#country .axis .tick text {
+    font-size: 11px;
+    font-weight: 400;
+    opacity: 80%;
+    fill: var(--outline-background-color);
+}
+
+#country .axis line {
+    stroke-dasharray: 1 1;
+    opacity: 40%;
+    stroke: var(--outline-background-color);
+}
+
+/* ----------------- Country ----------------- */
+.country-circle {
+    stroke-opacity: 60%;
+    stroke-width: 1px;
+}
+.country-circle-relative {
+    fill: none;
+    stroke-dasharray: 2px;
+    /* stroke: var(--outline-color); */
+}
+.country-circle-absolute {
+    /* fill-opacity: 80%; */
+    /* stroke: var(--outline-color); */
+    stroke-width: 1px;
+}
+/* .country-petal-path {
+    fill: var(--p4-color);
+    fill-opacity: 20%;
+    stroke-opacity: 50%;
+    stroke-width: 1px;
+    stroke: var(--background-color);
+    visibility: hidden;
+} */
+
+.male path {
+    opacity: 16%;
+}
+
+.country-years {
+    stroke-width: 0.5px;
+    stroke: var(--outline-background-color);
+    fill: var(--background-color);
+    opacity: 40%;
+}
+/* ----------------- Region ----------------- */
+.region-back-paths {
+    fill-opacity: 30%;
+    stroke-opacity: 100%;
+    stroke-width: 1.5px;
+    stroke-dasharray: 2px;
+}
+.region-front-paths {
+    stroke-width: 1px;
+    /* stroke: var(--background-color); */
+    /* stroke: var(--outline-color); */
+}
+.region-texture-paths {
+    stroke-width: 0.5px;
+    stroke-dasharray: 2px;
+    /* stroke: var(--background-color); */
+    /* stroke: var(--outline-color); */
+    fill-opacity: 0%;
+}
+.region-text-names {
+    text-anchor: end;
+}
+.region-text-names,
+.region-axis text {
+    font-weight: 600;
+    font-size: 12px;
+}
+
+/* ----------------- Link ----------------- */
+.region-link-back
+, .region-link-circle-back {
+    stroke-width: 4px;
+    stroke: var(--outline-color);
+}
+.region-link-front
+, .region-link-circle-front {
+    stroke-width: 2.5px;
+}
+.region-link,
+.region-link-circle {
+    fill: none;
+    /* visibility: hidden; */
+}
+
+.region-links-median .region-link-back,
+.region-links-median .region-link-circle-back {
+    stroke-dasharray: 4px;
+    stroke-linecap: round;
+}
+
+.region-marker {
+    stroke: var(--outline-color);
+    stroke-width: 1px;
+}
+
+/* ----------------- Click ----------------- */
+
+.deselect,
+.deselect:not(.region-links) path  {
+    fill-opacity: 5%;
+    stroke-opacity: 30%;
+    fill: var(--outline-background-color);
+    stroke: var(--outline-background-color);
+}
+
+.region-links.deselect {
+    fill-opacity: 10%;
+    stroke-opacity: 10%;
+}
+
+.male .select path {
+    opacity: 50%;
+    fill: var(--outline-color);
+    stroke-width: 1px;
+}
+
+
+.hidden {
+    visibility: hidden;
+}
+
+#world rect {
+    stroke-dasharray: 2px;
+    stroke: var(--outline-background-color);
+    stroke-width: 1px;
+    fill: var(--background-color);
+    opacity: 60%;
+}
+#world text {
+    text-anchor: start;
+    alignment-baseline: middle;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+#tooltip-rect {
+    opacity: 70%;
+    stroke: none;
+    fill: var(--background-color);
+}
+#tooltip-country {
+    font-weight: bold;
+}
+#tooltip-country,
+#tooltip-literacy,
+#tooltip-gap {
+    text-anchor: middle;
+    alignment-baseline: middle;
+    font-size: 12px;
+    
+}
+
+
+/*---------------- SCROLLAMA ----------------*/
+
+#scroll {
+    position: relative;
+    display: flex;
+}
+
+.scroll-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.step {
+    height: 850px;
+    padding: 0;
+    margin-bottom: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.step-text {
+    background-color: #f9eddcdc;
+    padding: 20px;
+    max-width: 60%;
+    border: var(--outline-background-color) 1px dotted;
+}
+.step:has(.step-text) {
+    height: 1400px;
+}
+.step-text * {
+    text-align: center;
+}
+
+.scroll-graphic {
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 850px;
+}
+
+.scroll-graphic.is-fixed {
+    position: fixed;
+}
+
+.scroll-graphic.is-bottom {
+    bottom: 0;
+    top: auto;
+}
+
+.scroll-graphic-container {
+    margin: 0;
+    height: 850px;
+}
+.scroll-graphic-container div{
+    margin: 0;
+}
+
+.scroll-graphic-container .header {
+    height: 50px;
+}
+
+.scroll-graphic-container .header h3 {
+    margin-top: 20px;
+}
+.scroll-graphic #chart {
+    margin: 0;
+}
+
+.space {
+    height: 40px;
+}
+
+

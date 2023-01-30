@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Female Adult Literacy Rates and their Gender Gap</title>
+        <link href="css/main.css" rel="stylesheet" type="text/css" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-YQC37FT3TK"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-YQC37FT3TK");
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Female Adult Literacy Rates across the Globe</h1>
+            <!-- Introduction -->
+            <div id="introduction">
+                <h2>What is literacy rate?</h2>
+                <p>Literacy Rate measures the percent of the population that can read and write statements that are commonly used in everyday life. UNESCO segments this metric by age group (youth, adult, elderly) and gender because these groups receive different qualities of education, which is influenced by factors such as the cultural standards for genders, demographic changes, and economic stability. For example, war and instability would leave some countries in poverty, and education would not be easily accessible. Historically, many cultures have favored men, granting them easier access to learning and then employment. Technology has also been growing rapidly, influencing how quickly the younger generation gains information.</p>
+                <p>This report summarizes the growth of literacy rates from 2010 to 2020, focusing particularly on female adults (ages 15 and up), their literacy rates split by countries and their gender gap in education.</p>
+            </div>
+            <div id="region-summary">
+                <h2>How has the regional female literacy rate improved in the past decade?</h2>
+                <p>The chart below compares the 6 main regions provided by The World Bank of Data (North America has no data and is excluded). The regions are hills ordered from left to right using the 2020 female literacy rate, which is the height.</p>
+                <div class="horizontal">
+                    <div>
+                        <p><span class="p0-color bold">Sub-Saharan Africa</span> has the lowest female literacy rate, starting from 50% in 2010 but increasing the most rapidly by an overall 11% over the past 10 years. On the other side of the spectrum, <span class="p5-color bold">Europe & Central Asia</span>, which mostly consists of higher income and developed countries, started at a 97% female literacy rate in 2010, increasing only by an overall 1% to 98% over the past 10 years.</p>
+                        <p>The past decade has shown that all regions have been improving literacy rates, yet regions with more room to grow are improving much faster than regions that already have a higher literacy rate.</p>
+                    </div>
+                    <div style="padding: 20px 20px 0 40px;"><img style="width: 450px;" src="img/regions-legend.svg"/></div>
+                </div>
+                <img src="img/regions.svg"/>
+                
+            </div>
+            <div id="country-summary">
+                <h2>What is the female literacy rate for each country, and how far is it from the male literacy rate?</h2>
+                <p>The next deep-dive takes a look at the country composition of the 6 regions. Not all countries improve their education quality at the same rate, and there must be some countries that have a higher economic standing than others in close proximity. The following chart contains many elements (e.g. position, shape, color, stroke), but it will be introduced step by step. Keep scrolling to learn more.</p>
+                <div class="space"></div>
+                <!-- Scroller -->
+                <div id="scroll">
+                    <div class="scroll-graphic">
+                        <div class="scroll-graphic-container">
+                            <div class="header">
+                                <h3>Chart of Female Literacy Rates and their Gender Gap by Country and Region from 2010 to 2020</h3>
+                            </div>
+                            <div id="chart"></div>
+                        </div>
+                    </div>
+                    <div class="scroll-text">
+                        <!-- Step 0: Regions -->
+                        <div class="step" data-step="0">
+                            <div class="step-text">
+                                <h2>What else can we learn from regional literacy rates?</h2>
+                                <p>
+                                    This is a chart that currently illustrates literacy rates. It's the same 2020 female literary rate comparison by region that you saw above, but we're going to add more depth to it.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Step 1: Axes + World -->
+                        <div class="step" data-step="1">
+                            <div class="step-text">
+                                <h2>What is the global female and male literacy rate?</h2>
+                                <p>
+                                    This graph has 2 axes to indicate the relationship between the female literacy rate (x-axis, left to right) and the literacy gap between genders (y-axis, bottom to top). 
+                                </p>
+                                <p>
+                                    The 2020 global average female literacy rate was 83.5%, and the male literacy rate was 90.2%, a 6.7% overall gap between the genders. <span class="bold">This is indicated by "X".</span>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 2: Female + Income shape + Abs Growth Size -->
+                        <div class="step" data-step="2">
+                            <div class="step-text">
+                                <h2>What is the female literacy rate by country?</h2>
+                                <p>
+                                    These are countries that contribued the 83% female global literacy rate. Like the "X", they are also positioned by their female literacy rate and their respective gender gap. The color, size, and shape symbolize each country's region, amount of overall (absolute) growth, and income group, respectively.
+                                </p>
+                                <img src="img/female-legend.svg"/>
+                                <p>There's a negative correlation with female literacy rate and gender gap. As literacy rate improves, the gender gap closes.</p>
+                            </div>
+                        </div>  
+
+                        <!-- Step 3: Relative Growth -->
+                        <div class="step" data-step="3">
+                            <div class="step-text">
+                                <h2>How has the female literacy rate grown by country since 2010?</h2>
+                                <p>
+                                    Using relative growth is a better measure of understanding how the literacy rate changed over time. Relative Growth is indicated by a dotted line, and it is usually higher than the absolute growth.
+                                </p>
+                                <img src="img/relative-legend.svg"/>
+                                <p>The country <span class="p0-color bold">Guinea</span> in Sub-Saharan Africa had the highest relative growth of 27.7%.</p>
+                            </div>
+                        </div>  
+
+
+
+                        <!-- Step 4: Male Shadow -->
+                        <div class="step" data-step="4">
+                            <div class="step-text">
+                                <h2>What is the male literacy rate and gender gap by country?</h2>
+                                <p>
+                                    To better visualize the gender gap (y-axis), each country's male literacy rate counterpart is illustrated either to the left (if males have a higher literacy rate than females) or the right (if females have a higher literacy rate than males).
+                                </p>
+                                <img src="img/male-legend.svg"/>
+                                <p>While most countries have a higher male literacy rate than female literacy rate, the <span class="p3-color bold">Latin America & Caribbean</span> region has a different spread of gender gap, where many of its countries have a female literacy rate that is 1 to 3% higher than male literacy rate.
+                                </p>
+                            </div>
+                        </div> 
+
+                        <!-- Step 5: Crumbs -->
+                        <div class="step" data-step="5">
+                            <div class="step-text">
+                                <h2>How have countries been improving historically?</h2>
+                                <p>
+                                    Countries don't necessarily improve at a constant rate. For countries with at least 8 years of data, there are small crumbs of the same shape and color as the country's latest data point. Their position shows the country's historical female literacy rate and gender gap. Generally, they show progress towards improving the literacy rate and closing the gender gap.
+                                </p>
+                                <img src="img/crumbs-legend.svg"/>
+                                <p>Some countries have historical movement of literacy rates moving downwards and towards the right in the chart, which indicates improving female literacy rates to lessen the gender literacy gap.</p>
+                            </div>
+                        </div> 
+
+                        <!-- Step 6: Region Average -->
+                        <div class="step" data-step="6">
+                            <div class="step-text">
+                                <h2>What is average female and male literacy rate by region?</h2>
+                                <p>
+                                    The large circle extending from the bottom regions show the average female literacy rate and difference from the average male literacy rate.
+                                </p>
+                                <p>The <span class="p0-color bold">Sub-Saharan Africa</span> region has the lowest literacy rates (lowest on x-axis), but the <span class="p1-color bold">South Asia</span> region has the widest gender gap (highest on y-axis).</p>
+                            </div>
+                        </div> 
+
+                        <!-- Step 7: Region Median -->
+                        <div class="step" data-step="7">
+                            <div class="step-text">
+                                <h2>What is median female and male literacy rate by region?</h2>
+                                <p>
+                                    Sometimes the average alone is not enough to understand how similar the countries in the same region are. If the median and average are far apart, then there could be outliers or uneven spread. The median is a large circle with dotted outline. The small dot at the bottom of the link is on the side where the average is.
+                                </p>
+                                <img src="img/median-legend.svg"/>
+                                <p>Many countries, particularly from <span class="p4-color bold">East Asia & Pacific</span> and <span class="p5-color bold">Europe & Central Asia</span>, have literacy rates concentrated above 95% which skew the distribution to the left.</p>
+                                <p>The region <span class="p2-color bold">Middle East & North Africa</span> has the largest spread of literacy rates. Although the median female literacy rate is 94%, the average is 73%, which is driven down by <span class="p2-color bold">Morocco</span> and <span class="p2-color bold">Egypt</span>.</p>
+                            </div>
+                        </div> 
+
+                        <!-- Step 8: Hover/Interact -->
+                        <div class="step" data-step="8" style="height: 400px;">
+                            <div class="step-text" style="width:60%;">
+                                <h2>How do I interact with the chart to learn more?</h2>
+                                <p>This concludes the walkthrough of the chart, and interactions will enable after this textbox moves off page. Hover over these icons to see their name and literacy rates.</p>
+                                <img src="img/interaction-legend.svg"/>
+                                <p>A legend with all the encodings is at the bottom of the chart.</p>
+                            </div>
+                        </div> 
+
+                        <!-- Step 10: Blank -->
+                        <div class="step" data-step="9" style="height: 300px;">
+                        </div> 
+                        <div class="step" data-step="10"></div>
+
+                    </div>
+                    
+                </div>
+
+                <div id="legend">
+                    <h2>Reading the Chart</h2>
+                    <h3>What is the Country's Literacy Rate by Gender?</h3>
+                    <img src="img/legend1.svg"/>
+                    
+                    <h3>How have each Gender's Literacy Rate Grown?</h3>
+                    <img src="img/legend2.svg"/>
+                    
+                    <h3>What is the Female Literacy Rate by Region?</h3>
+                    <img src="img/legend3.svg"/>
+                    
+                </div>
+            </div>
+
+            <div id="appendix">
+                <h2>Appendix</h2>
+                <h3>Definitions</h3>
+                <ul>
+                    <li>Literacy Gender Gap: male literacy rate - female literacy rate, comparing the latest year which is the same for both genders</li>
+                    <li>Relative Growth: literacy rate from latest year / literacy rate from earliest year - 1</li>
+                    <li>Absolute Growth: literacy rate from latest year - literacy rate from earliest year</li>
+                    <li>Average: mean of the literacy rates for all countries in the region, provided directly by the World Bank</li>
+                    <li>Median (Region): 50th percentile of literacy rates for countries in the region based on the latest data available for each country</li>
+                </ul>
+
+                <h3>Data Sources</h3>
+                <p>This historical data is provided by the World Government Summit with the Data Visualization entry of "What Just Happened?" The link to the dataset is <a href="https://wdvp.worldgovernmentsummit.org/">here</a>. The <a href="https://data.worldbank.org/indicator/SE.ADT.LITR.FE.ZS?view=chart">female literacy rates</a> and <a href="https://data.worldbank.org/indicator/SE.ADT.LITR.MA.ZS?view=chart">male literacy rates</a> are available from the World Bank. The data used includes the country, its region, its income group, and its literacy rates for female and male between 2010 and 2020.</p>
+                <p>The <a href="http://uis.unesco.org/en/glossary-term/literacy-rate">UNESCO glossary</a> provided the definition of literacy rate, its indication on the quality of education systems, and some external factors.</p>
+                <h3>Methodology</h3>
+                <p>
+                    This dataset had to be explored, analyzed, and curated before creating a data visualization. Some countries had sparse data, some were missing entirely, the data points were too cluttered, etc.. Therefore, the following rules were applied to curate the dataset systematically.
+                </p>
+                <ul>
+                    <li>Countries that did not have more than 2 years of data were dropped because their growth rates could not be computed.</li>
+                    <li>Only absolute growth rates were plotted if they had data on or after 2015. Using data before 2015 would have a higher chance of being outdated, thus not accurately comparable to the other countries with more up-to-date data.</li>
+                    <li>Multiple versions of aggregated regions were provided in the original dataset, but they weren't used unless the individual countries were explicitly mapped to the region. This was to avoid using regions that overlapped countries and avoid making mistakes on using an incorrect mapping if my source was outdated. Therefore, many aggregations, such as Caribbean small states or European Union, were not used in the visualization. The North America region was dropped due to not having any countries with literacy rate information.</li>
+                    <li>Power scales were used instead of linear scales to map the female literacy rates (x-axis) and gender gap in literacy rates (y-axis). Transforming helped reduce cluttering and zoom into the countries where the female literacy rates were close to 100% and gender gap close to 0%.</li>
+                    <li>Countries with a gender gap with female literacy rate more than 5% more than the male literacy rate in their latest year were dropped due to being outliers. Lesotho (Sub-Saharan Africa) and Jamaica (Latin America & Caribbean) were removed due to having a -17.2% and -9.3% gap, respectively.</li>
+                    <li>Crumbs (small translucent shapes) were plotted only if the country had at least 8 years of data. Filtering to only a few countries' paths made it easier to tell apart from one another.</li>
+                </ul>
+                <h2>Created For</h2>
+                <div id="logo-center">
+                    <a href="https://wdvp.worldgovernmentsummit.org/"><img src="img/WGS-summit-logo.svg"/></a>
+                </div>
+                <h2>Created By</h2>
+                <p style="text-align: center;">Conceptualized and built in January 2023</p>
+                <p style="text-align: center;">Sarina Chen | <a href="https://ifcolorful.com/">ifcolorful.com</a> | <a href="https://github.com/sarinac/worldgovernmentsummit-literacy-rates">See GitHub</a></p>
+            </div>
+
+        </div>
+        <!-- Scripts -->
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://unpkg.com/scrollama@2.2.2/build/scrollama.js"></script>
+        <script src="js/helpers.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
