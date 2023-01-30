@@ -433,4 +433,6 @@ li {
     height: 40px;
 }
 
-
+::selection {
+    background-color: #ffdea6;
+}
